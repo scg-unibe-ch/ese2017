@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<security:http auto-config="true" access-denied-page="/access-denied">
+		<security:intercept-url pattern="/profile/**" access="ROLE_USER" />
+		<security:form-login login-page="/login" authentication-failure-url="/login?error=true" 
+			default-target-url="/" />
+		 <security:logout invalidate-session="true" logout-success-url="/" 
+			logout-url="/logout" />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="mainDataSource"
+				users-by-username-query="select username,password, enabled from users where username=?"
+				authorities-by-username-query="select u.username, ur.role from users u inner join `user_roles` ur on (u.id = ur.user_id) where username = ?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+</beans>

@@ -1,0 +1,76 @@
+/* This file is used for smartphones */
+h1{
+	font-size: 1.6em;
+}
+
+body{
+	min-width: 0px;
+	padding-top: 50px;
+}
+
+#content{
+	padding:15px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Header & Footer */
+
+header{
+	min-width: 0px;
+	height: 50px;
+}
+
+header nav{
+	padding: 0;
+}
+
+header ul li{
+	margin-top: 10px;
+}
+.left img{
+	width: 40px;
+	height: 40px;
+}
+
+#profile_picture{
+	width: 130px;
+}
+
+#profile_picture img{
+	width: 40px;
+	height: 40px;
+}
+
+#profile_picture .text{
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+#profile_picture a{
+	height: 40px;
+}
+
+footer{
+	padding-top: 0;
+	height: 30px;
+}
+
+footer nav{
+	margin-top: 1px;
+}
+
+footer li{
+	font-size: 0.7em;
+}
+
+/* -------------------------------------------------------------------- */
+/* ----------------------------Individual pages------------------------ */
+/* -------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+/* search.jsp */
+#searchForm {
+	width: 260px;
+}
