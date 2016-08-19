@@ -6,3 +6,7 @@ To build this project, please follow these steps:
 2. When building the project, have Apache and MySQL running. MySQL should be accessible as user *root* with no password.
 3. Build the project using `jetty:stop jetty:run`. The build adds test users and test data to the database, so no additional steps should be required.
 4. Visit the site at [http://localhost:8080](http://localhost:8080). You can find the test users listed on the login page.
+
+
+Credits:
+Thanks to [lucaliechti](https://github.com/lucaliechti), [mariokaufmann](https://github.com/mariokaufmann), [RaphaelBucher](https://github.com/RaphaelBucher), and [tomaszkolonko](https://github.com/tomaszkolonko) for this very good base project. 
