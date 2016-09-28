@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>god</title>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<style>
+#tweet {
+	position: relative;
+	display: none;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+blockquote {
+	display: none;
+}
+</style>
+<script>
+	$(document).ready(function() {
+		$('#tweet').delay(100).fadeIn();
+	});
+	window.sendToHell = function() {
+		$('#tweet').animate({
+			'left' : '-300px',
+			'opacity' : 0
+		}, 500);
+	};
+	window.sendToHeaven = function() {
+		$('#tweet').animate({
+			'left' : '300px',
+			'opacity' : 0
+		}, 500);
+	};
+</script>
+</head>
+<body>
+	<div id="tweet">{{content}}</div>
+</body>
+</html>
